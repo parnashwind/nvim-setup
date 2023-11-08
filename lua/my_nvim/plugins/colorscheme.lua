@@ -1,0 +1,17 @@
+return {
+	{
+		"bluz71/vim-nightfly-colors",
+		priority = 1000, -- make sure to load this before all the other start plugins
+		config = function()
+			-- load the colorscheme here
+			vim.cmd([[
+				colorscheme nightfly
+				hi Normal ctermbg=None guibg=None
+			]])
+		end,
+	},
+	{
+		"folke/tokyonight.nvim",
+		lazy = false,
+	},
+}
