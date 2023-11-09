@@ -15,7 +15,7 @@ return {
 		local keymap = vim.keymap -- for conciseness
 		local opts = { noremap = true, silent = true }
 
-		local on_attach = function(client, bufnr)
+		local on_attach = function(bufnr)
 			opts.buffer = bufnr
 
 			-- set keybinds
@@ -64,9 +64,20 @@ return {
 
 		-- Change the Diagnostic symbols in the sign column (gutter)
 		-- (not in youtube nvim video)
+		local signs = { Error = " ", Warn = " ", Hint = " ", Info = "󰙎 " }
+		for type, icon in pairs(signs) do
+			local hl = "DiagnosticSign" .. type
+			vim.fn.sign_define(hl, {text = icon, texthl = hl, numhl = ""})
+		end
 
 		-- configure python server
 		lspconfig["pyright"].setup({
+			capabilities = capabilities,
+			on_attach = on_attach,
+		})
+
+		-- configure javasvript/typescript server
+		lspconfig["tsserver"].setup({
 			capabilities = capabilities,
 			on_attach = on_attach,
 		})

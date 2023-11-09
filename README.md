@@ -2,4 +2,4 @@
 My nvim setup
 
 Require:
-ripgrep unzip
+ripgrep unzip npm
