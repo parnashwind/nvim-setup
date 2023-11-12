@@ -39,12 +39,16 @@ vim.cmd([[
 ]])
 
 -- More accessible ESC in insert and terminal mode
-keymap("i", ".,", "<ESC>", default_opts)
-keymap("t", ".,", "<C-\\><C-n>", default_opts)
+keymap("i", ",.", "<ESC>", default_opts)
+keymap("t", ",.", "<C-\\><C-n>", default_opts)
+
+-- Navigate tabs
+-- keymap("n", "<leader>zz", "<cmd>wq<CR>", default_opts)
+-- keymap("n", "<leader>zq", "<cmd>q<CR>", default_opts)
 
 -- Closing buffer
 keymap("n", "<leader>zz", "<cmd>wq<CR>", default_opts)
-keymap("n", "<leader>zq", "<cmd>q<CR>", default_opts)
+keymap("n", "<leader>qq", "<cmd>q!<CR>", default_opts)
 
 -- Creating splits
 keymap("n", "<leader>sv", "<cmd>vsplit<CR>", default_opts)
