@@ -14,5 +14,6 @@ vim.cmd([[
 	set sidescrolloff=10
 	" set mouse=a
 	set nowrap
+	set expandtab
 ]])
 
