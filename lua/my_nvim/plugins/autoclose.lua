@@ -3,6 +3,10 @@ return {
     config = function()
         local autoclose = require("autoclose")
 
-        autoclose.setup()
+        autoclose.setup({
+            keys = {
+                ["'"] = {escape=true, close=false, pair="''", disable_filetypes={}},
+            }
+        })
     end
 }
