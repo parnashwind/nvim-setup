@@ -7,6 +7,7 @@ return {
 			vim.cmd([[
 				colorscheme nightfly
 				hi Normal ctermbg=None guibg=None
+                hi Visual guibg=#3d3b75 guifg=None
 			]])
 		end,
 	},
