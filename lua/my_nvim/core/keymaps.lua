@@ -41,6 +41,9 @@ vim.cmd([[
 -- More accessible ESC in insert and terminal mode
 keymap("i", ",.", "<ESC>", default_opts)
 keymap("t", ",.", "<C-\\><C-n>", default_opts)
+keymap("n", "<leader>ai", "<cmd>ChatGPT<CR>", default_opts)
+keymap("n", "<C-c>", "<cmd>ChatGPT<CR>", default_opts)
+keymap("v", "<C-c>", "<cmd>ChatGPTRun explain_code<CR>", default_opts)
 
 -- Navigate tabs
 -- keymap("n", "<leader>zz", "<cmd>wq<CR>", default_opts)
