@@ -40,8 +40,18 @@ vim.cmd([[
 
 -- More accessible ESC in insert and terminal mode
 keymap("i", ",.", "<ESC>", default_opts)
+keymap("i", "jk", "<ESC>", default_opts)
 keymap("t", ",.", "<C-\\><C-n>", default_opts)
-keymap("n", "<leader>ai", "<cmd>ChatGPT<CR>", default_opts)
+
+-- Window navigation
+keymap("n", "<leader>w", "<C-w>W", default_opts)
+keymap("n", "<leader>,w", "<C-w>w", default_opts)
+
+-- Buffer navigation
+keymap("n", "<leader>bn", "<CMD>:bnext<CR>", default_opts)
+keymap("n", "<leader>bp", "<CMD>:bprevious<CR>", default_opts)
+
+-- ChatGPT.nvim
 keymap("n", "<C-c>", "<cmd>ChatGPT<CR>", default_opts)
 keymap("v", "<C-c>", "<cmd>ChatGPTRun explain_code<CR>", default_opts)
 
