@@ -10,7 +10,10 @@ return {
     config = function()
         local home = vim.fn.expand("$HOME")
         require("chatgpt").setup({
-            api_key_cmd = "gpg --decrypt " .. home .. "/.local/.azureapikey.txt.gpg"
+            api_key_cmd = "gpg --decrypt " .. home .. "/.local/.azureapikey-gpt4.txt.gpg",
+            openai_params = {
+                max_tokens = 4000,
+            },
         })
     end,
 }

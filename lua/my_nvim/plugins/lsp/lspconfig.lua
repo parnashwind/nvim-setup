@@ -103,5 +103,20 @@ return {
 			},
 		})
 
+        -- configure sql server
+		lspconfig["sqlls"].setup({
+			capabilities = capabilities,
+			on_attach = on_attach,
+            cmd = {"sql-language-server", "up", "--method", "stdio"},
+            filetypes = {"sql", "mysql", "psql"},
+            root_dir = lspconfig.util.root_pattern(".git", vim.fn.getcwd()),
+        })
+
+        -- vim.filetype.add({
+        --     extension = {
+        --         psql = "sql",
+        --     },
+        -- })
+
 	end,
 }
