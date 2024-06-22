@@ -18,5 +18,6 @@ vim.cmd([[
 	" set mouse=a
 	set nowrap
 	set expandtab
+    set colorcolumn=80
 ]])
 
