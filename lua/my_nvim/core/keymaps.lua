@@ -36,6 +36,13 @@ vim.cmd([[
 	inoremap <C-h> <C-\><C-N><C-w>> " Move to right screen
 	inoremap <C-j> <C-\><C-N><C-w>+ " Move to lower screen
 	inoremap <C-k> <C-\><C-N><C-w>- " Move to upper screen
+
+    nnoremap <leader>cc :CopilotChat<CR>
+    vnoremap <leader>cc :CopilotChat<CR>
+    tnoremap <leader>cc :CopilotChatClose<CR>
+    nnoremap <leader>cr :CopilotChatReview<CR>
+    vnoremap <leader>cr :CopilotChatReview<CR>
+
 ]])
 
 -- More accessible ESC in insert and terminal mode

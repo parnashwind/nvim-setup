@@ -3,6 +3,7 @@ return {
     build = ":UpdateRemotePlugins",
     version = "*",
     init = function() -- Example
+        vim.g['semshi#excluded_hl_groups'] = {"local", "unresolved"}
         vim.cmd ([[
             hi semshiSelected ctermfg=231 guifg=#ffffff ctermbg=161 guibg=#335577
         ]])
